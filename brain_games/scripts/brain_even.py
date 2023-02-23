@@ -6,9 +6,10 @@ import random
 import prompt
 
 
-user_name = brain_games.cli.user_name()
-
 def main():
+    brain_games.main()
+    user_name = brain_games.cli.user_name()
+
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     i = 0
@@ -21,16 +22,25 @@ def main():
         if answer == 'yes' and number % 2 == 0:
             print('Correct!')
             i = i + 1
+
         elif answer == 'no' and number % 2 != 0:
             print('Correct!')
             i = i + 1
-        else:
-            print(answer + "is wrong answer ;(. Correct answer was '" + correct_answer + "'.")
+
+        elif answer != 'yes' and number % 2 == 0:
+            correct_answer = 'yes'
+            print("'" + answer + "' is wrong answer ;(. Correct answer was '" + correct_answer + "'.")
             print("Let's try again, " + user_name + "!")
+            break
+
+        elif answer != 'no' and number % 2 != 0:
+            correct_answer = 'no'
+            print("'" + answer + "' is wrong answer ;(. Correct answer was '" + correct_answer + "'.")
+            print("Let's try again, " + user_name + "!")
+            break
 
     if i == 3:
         print('Congratulations, ' + user_name + '!')
 
 if __name__ == '__main__':
-    brain_games.main()
     main()
