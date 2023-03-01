@@ -1,7 +1,8 @@
 from math import gcd
 import random
 
-main_task = 'Find the greatest common divisor of given numbers.'
+MAIN_TASK = 'Find the greatest common divisor of given numbers.'
+
 
 def game_task():
     number_one = random.randint(1, 100)

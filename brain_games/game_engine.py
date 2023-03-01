@@ -1,6 +1,10 @@
 import prompt
 from brain_games import cli
 
+
+ANSWERS_FOR_WIN = 3
+
+
 def game_step(question, correct_answer):
     print('Question: ' + str(question))
     answer = prompt.string('Your answer: ')
@@ -8,14 +12,16 @@ def game_step(question, correct_answer):
         print('Correct!')
         return True
     else:
-        print("'" + answer + "' is wrong answer ;(. Correct answer was '" + correct_answer + "'.")
+        print(f"{answer} is wrong answer ;(. \
+        Correct answer was {correct_answer}")
         return False
+
 
 def game_process(game):
     user_name = cli.welcome_user()
-    print(game.main_task)
+    print(game.MAIN_TASK)
     count = 0
-    while count < 3:
+    while count < ANSWERS_FOR_WIN:
         question, correct_answer = game.game_task()
         if game_step(question, correct_answer):
             count += 1
@@ -23,5 +29,5 @@ def game_process(game):
             print("Let's try again, " + user_name + "!")
             break
 
-    if count == 3:
+    if count == ANSWERS_FOR_WIN:
         print('Congratulations, ' + user_name + '!')

@@ -1,9 +1,10 @@
 import random
 
-main_task = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MAIN_TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def prime(number):
-    for i in range(2, int(number-1)):
+    for i in range(2, int(number - 1)):
         if number % i == 0:
             return 'no'
     return 'yes'
