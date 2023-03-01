@@ -10,7 +10,9 @@ This project was built using Poetry (https://python-poetry.org/)
 Install:
 
 git clone https://github.com/xmypride/python-project-49.git
+
 cd python-project-49
+
 make package-install
 
 
