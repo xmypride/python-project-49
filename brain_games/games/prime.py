@@ -13,7 +13,7 @@ def prime(number):
 def game_task():
     number = random.randint(2, 100)
     question = number
-    correct_answer = str(prime(number))
+    correct_answer = prime(number)
     return question, correct_answer
 
 

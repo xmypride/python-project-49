@@ -12,5 +12,5 @@ def even(question):
 
 def game_task():
     question = random.randint(1, 100)
-    correct_answer = str(even(question))
+    correct_answer = even(question)
     return question, correct_answer
