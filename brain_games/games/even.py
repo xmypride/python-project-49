@@ -2,15 +2,24 @@ import random
 
 MAIN_TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
+# The minimum possible number in the expression
+LOWER_LIMIT = 1
+
+# The maximum possible number in the expression
+UPPER_LIMIT = 100
+
 
 def even(question):
     if question % 2 == 0:
-        return 'yes'
+        return True
     else:
-        return 'no'
+        return False
 
 
 def game_task():
-    question = random.randint(1, 100)
+    question = random.randint(LOWER_LIMIT, UPPER_LIMIT)
     correct_answer = even(question)
-    return question, correct_answer
+    if correct_answer:
+        return question, 'yes'
+    else:
+        return question, 'no'

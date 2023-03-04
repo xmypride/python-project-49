@@ -3,10 +3,16 @@ import operator
 
 MAIN_TASK = 'What is the result of the expression?'
 
+# The minimum possible number in the expression
+LOWER_LIMIT = 1
+
+# The maximum possible number in the expression
+UPPER_LIMIT = 100
+
 
 def game_task():
-    number_one = random.randint(1, 100)
-    number_two = random.randint(1, 100)
+    number_one = random.randint(LOWER_LIMIT, UPPER_LIMIT)
+    number_two = random.randint(LOWER_LIMIT, UPPER_LIMIT)
     operators = {
         '+': operator.add,
         '-': operator.sub,
