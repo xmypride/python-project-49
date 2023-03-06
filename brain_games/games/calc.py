@@ -3,10 +3,8 @@ import operator
 
 MAIN_TASK = 'What is the result of the expression?'
 
-# The minimum possible number in the expression
 LOWER_LIMIT = 1
 
-# The maximum possible number in the expression
 UPPER_LIMIT = 100
 
 

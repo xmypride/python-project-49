@@ -3,7 +3,7 @@ from brain_games import cli
 
 
 ANSWERS_FOR_WIN = 3
-
+user_name = cli.welcome_user()
 
 def game_step(question, correct_answer):
     print('Question: ' + str(question))
@@ -18,7 +18,7 @@ def game_step(question, correct_answer):
 
 
 def game_process(game):
-    user_name = cli.welcome_user()
+    #user_name = cli.welcome_user()
     print(game.MAIN_TASK)
     count = 0
     while count < ANSWERS_FOR_WIN:
@@ -28,6 +28,5 @@ def game_process(game):
         else:
             print("Let's try again, " + user_name + "!")
             break
-
-    if count == ANSWERS_FOR_WIN:
+    else:
         print('Congratulations, ' + user_name + '!')

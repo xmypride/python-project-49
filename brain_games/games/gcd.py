@@ -3,10 +3,8 @@ import random
 
 MAIN_TASK = 'Find the greatest common divisor of given numbers.'
 
-# The minimum possible number in the expression
 LOWER_LIMIT = 1
 
-# The maximum possible number in the expression
 UPPER_LIMIT = 100
 
 

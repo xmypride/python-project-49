@@ -2,16 +2,12 @@ import random
 
 MAIN_TASK = 'What number is missing in the progression?'
 
-# The minimum possible number in the expression
 LOWER_LIMIT = 1
 
-# The maximum possible number in the expression
 UPPER_LIMIT = 100
 
-# The minimum possible step in the expression
 LOWER_STEP_LIMIT = 5
 
-# The maximum possible number in the expression
 UPPER_STEP_LIMIT = 10
 
 
@@ -24,7 +20,3 @@ def game_task():
     range_numbers[missed_number] = '..'
     question = ' '.join(str(number) for number in range_numbers)
     return question, correct_answer
-
-
-if __name__ == '__main__':
-    game_task()
