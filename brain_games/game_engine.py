@@ -5,6 +5,7 @@ from brain_games import cli
 ANSWERS_FOR_WIN = 3
 user_name = cli.welcome_user()
 
+
 def game_step(question, correct_answer):
     print('Question: ' + str(question))
     answer = prompt.string('Your answer: ')
@@ -18,7 +19,6 @@ def game_step(question, correct_answer):
 
 
 def game_process(game):
-    #user_name = cli.welcome_user()
     print(game.MAIN_TASK)
     count = 0
     while count < ANSWERS_FOR_WIN:
